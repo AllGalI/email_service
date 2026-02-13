@@ -5,7 +5,7 @@ from pathlib import Path
 
 
 # Путь к папке с шаблонами
-TEMPLATES_DIR = Path(__file__).parent.parent / "templates"
+TEMPLATES_DIR = Path(__file__).parent / "templates"
 
 env = Environment(
     loader=FileSystemLoader(TEMPLATES_DIR),
