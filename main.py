@@ -5,7 +5,7 @@ from email.message import EmailMessage
 from celery import Celery
 from dotenv import load_dotenv
 
-from email_service.templates import render_template
+from templates import render_template
 
 import os
 load_dotenv()
