@@ -13,7 +13,7 @@ load_dotenv()
 
 celery_app = Celery('email_service')
 
-@celery_app.task(name='tasks.send_email')
+@celery_app.task(name='tasks.send_email', queue='email_queue')
 def send_email(to_email: str, subject: str, template_name: str, context: dict):
     # 1. Рендерим HTML (убедись, что render_template тоже синхронная)
     html_content = render_template(template_name, context)
